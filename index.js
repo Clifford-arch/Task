@@ -10,8 +10,8 @@ app.get("/welcome", (req, res) => {
   res.send("Welcome to The Express API");
 });
 
-app.get("/*", (req, res) => {
-  res.send("Nothing Over Here");
+app.use((req, res) => {
+  res.status(404).send("Nothing Over Here");
 });
 
 app.listen(port, () => {
