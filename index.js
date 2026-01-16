@@ -10,6 +10,10 @@ app.get("/welcome", (req, res) => {
   res.send("Welcome to The Express API");
 });
 
+app.get("/*", (req, res) => {
+  res.send("Nothing Over Here");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
