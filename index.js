@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/welcome", (res) => {
+app.get("/welcome", (req, res) => {
   res.send("Welcome to The Express API");
 });
 
